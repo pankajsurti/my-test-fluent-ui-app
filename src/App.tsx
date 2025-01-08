@@ -1,6 +1,8 @@
 import React from 'react';
+import { FluentThemeProvider, DEFAULT_COMPONENT_ICONS } from '@azure/communication-react';
+import { initializeIcons, registerIcons } from '@fluentui/react';
 import { Stack, Text, Link, FontWeights, IStackTokens, IStackStyles, ITextStyles } from '@fluentui/react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 const boldStyle: Partial<ITextStyles> = { root: { fontWeight: FontWeights.semibold } };
@@ -14,7 +16,18 @@ const stackStyles: Partial<IStackStyles> = {
   },
 };
 
+// If you don't want to provide custom icons, you can register the default ones included with the library.
+// This will ensure that all the icons are rendered correctly.
+initializeIcons();
+registerIcons({ icons: DEFAULT_COMPONENT_ICONS });
+
 export const App: React.FunctionComponent = () => {
+  return (
+    <FluentThemeProvider>
+      <h1>Hooray! You set up Fluent Theme Provider 🎉🎉🎉</h1>
+    </FluentThemeProvider>
+  );
+  /*
   return (
     <Stack horizontalAlign="center" verticalAlign="center" verticalFill styles={stackStyles} tokens={stackTokens}>
       <img className="App-logo" src={logo} alt="logo" />
@@ -40,5 +53,6 @@ export const App: React.FunctionComponent = () => {
         <Link href="https://aka.ms/themedesigner">Theme designer</Link>
       </Stack>
     </Stack>
-  );
+    
+  );*/
 };
