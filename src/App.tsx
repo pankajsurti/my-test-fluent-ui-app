@@ -1,9 +1,12 @@
 import React from 'react';
 import { FluentThemeProvider, DEFAULT_COMPONENT_ICONS } from '@azure/communication-react';
-import { initializeIcons, registerIcons } from '@fluentui/react';
+import { Stack, initializeIcons, registerIcons } from '@fluentui/react';
 //import { Stack, Text, Link, FontWeights, IStackTokens, IStackStyles, ITextStyles } from '@fluentui/react';
 //import logo from './logo.svg';
 import './App.css';
+
+import { CallingComponents } from './CallingComponents';
+import { ChatComponents } from './ChatComponents';
 
 /*
 const boldStyle: Partial<ITextStyles> = { root: { fontWeight: FontWeights.semibold } };
@@ -23,9 +26,17 @@ initializeIcons();
 registerIcons({ icons: DEFAULT_COMPONENT_ICONS });
 
 export const App: React.FunctionComponent = () => {
+  const stackStyle = {
+    root: {
+      width: '100%'
+    }
+  };
   return (
     <FluentThemeProvider>
-      <h1>Hooray! You set up Fluent Theme Provider 🎉🎉🎉</h1>
+      <Stack horizontal horizontalAlign="space-evenly" styles={stackStyle}>
+        <CallingComponents />
+        <ChatComponents />
+      </Stack>
     </FluentThemeProvider>
   );
   /*
