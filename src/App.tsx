@@ -7,6 +7,7 @@ import './App.css';
 
 import { CallingComponents } from './CallingComponents';
 import { ChatComponents } from './ChatComponents';
+import { DefaultChatParticipantListExample } from './ParticipantListExample';
 
 /*
 const boldStyle: Partial<ITextStyles> = { root: { fontWeight: FontWeights.semibold } };
@@ -36,6 +37,9 @@ export const App: React.FunctionComponent = () => {
       <Stack horizontal horizontalAlign="space-evenly" styles={stackStyle}>
         <CallingComponents />
         <ChatComponents />
+      </Stack>
+      <Stack verticalAlign='space-evenly'  styles={stackStyle}>
+        <DefaultChatParticipantListExample />
       </Stack>
     </FluentThemeProvider>
   );
