@@ -1,10 +1,11 @@
 import React from 'react';
 import { FluentThemeProvider, DEFAULT_COMPONENT_ICONS } from '@azure/communication-react';
 import { initializeIcons, registerIcons } from '@fluentui/react';
-import { Stack, Text, Link, FontWeights, IStackTokens, IStackStyles, ITextStyles } from '@fluentui/react';
+//import { Stack, Text, Link, FontWeights, IStackTokens, IStackStyles, ITextStyles } from '@fluentui/react';
 //import logo from './logo.svg';
 import './App.css';
 
+/*
 const boldStyle: Partial<ITextStyles> = { root: { fontWeight: FontWeights.semibold } };
 const stackTokens: IStackTokens = { childrenGap: 15 };
 const stackStyles: Partial<IStackStyles> = {
@@ -15,7 +16,7 @@ const stackStyles: Partial<IStackStyles> = {
     color: '#605e5c',
   },
 };
-
+*/
 // If you don't want to provide custom icons, you can register the default ones included with the library.
 // This will ensure that all the icons are rendered correctly.
 initializeIcons();
