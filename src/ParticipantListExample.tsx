@@ -62,7 +62,7 @@ export const DefaultChatParticipantListExample: () => JSX.Element = () => {
   ];
 
   return (
-    <Stack horizontalAlign="center" verticalAlign="center" verticalFill>
+    <Stack horizontal horizontalAlign="space-evenly" >
         <Stack >
         <div style={{ fontSize: '1.5rem', marginBottom: '1rem', fontFamily: 'Segoe UI' }}>Participants</div>
         <ParticipantList participants={mockParticipants} />
