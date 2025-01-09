@@ -69,7 +69,7 @@ export const DefaultChatParticipantListExample: () => JSX.Element = () => {
         </Stack>
         <Stack>
             <div style={{ fontSize: '1.5rem', marginBottom: '1rem', fontFamily: 'Segoe UI' }}>Participants</div>
-            <ParticipantList participants={mockParticipants} myUserId={'user1'} />
+            <ParticipantList participants={mockParticipants2} myUserId={'user1'} />
         </Stack>
 
     </Stack>
